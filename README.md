@@ -1,7 +1,5 @@
 # Fuzzy-Supervised Residual TD3 Experiments
 
-This folder turns the IMS term-paper idea into a reproducible benchmark rather than a claim-only manuscript section.
-
 ## Research Question
 
 Does a Mamdani fuzzy supervisor improve safety, sample efficiency, and disturbance rejection when TD3 is trained as a residual torque compensator for robotic trajectory tracking?
