@@ -1,0 +1,56 @@
+{
+  "description": "Two-link manipulator benchmark for safe residual Fuzzy-TD3 control.",
+  "arguments": {
+    "timesteps": 12000,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "eval_episodes": 4,
+    "include_sac": true,
+    "include_ddpg": true,
+    "include_residual_sac": true,
+    "include_gated": true,
+    "force_train": false,
+    "skip_train": true
+  },
+  "scenarios": {
+    "nominal": {
+      "name": "nominal",
+      "payload_multiplier": 1.0,
+      "friction_multiplier": 1.0,
+      "disturbance_amplitude": 0.0,
+      "starts_at": 2.5
+    },
+    "payload_2x": {
+      "name": "payload_2x",
+      "payload_multiplier": 2.0,
+      "friction_multiplier": 1.25,
+      "disturbance_amplitude": 0.4,
+      "starts_at": 2.5
+    },
+    "severe_shift": {
+      "name": "severe_shift",
+      "payload_multiplier": 3.0,
+      "friction_multiplier": 1.75,
+      "disturbance_amplitude": 0.8,
+      "starts_at": 2.5
+    }
+  },
+  "metrics": [
+    "rmse_rad",
+    "failure_penalized_rmse_rad",
+    "itae",
+    "peak_error_rad",
+    "torque_rms",
+    "torque_smoothness",
+    "safety_violation_rate",
+    "residual_gate_mean",
+    "completed",
+    "duration_s",
+    "return"
+  ]
+}
