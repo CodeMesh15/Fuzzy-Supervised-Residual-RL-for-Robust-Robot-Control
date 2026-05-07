@@ -5,4 +5,8 @@ __pycache__/
 *.blg
 *.log
 *.out
+*.nav
+*.snm
+*.toc
+*.vrb
 *Notes.bib
